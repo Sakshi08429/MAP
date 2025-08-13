@@ -7,9 +7,9 @@ const btnCurrentLocation = document.getElementById('btn-current-location');
 let map, marker;
 
 
-function initMap(lat = 20, lon = 0) {
+function initMap(lat = 28.584359, lon = 77.315493) {
   if (map) {
-    map.setView([lat, lon], 13);
+    map.setView([lat, lon], 15);
     if (marker) marker.setLatLng([lat, lon]);
     else marker = L.marker([lat, lon]).addTo(map);
   } else {
@@ -39,7 +39,7 @@ async function loadCountries() {
 
     countrySelect.innerHTML = `<option value="">Select Country</option>` +
       data.countries.map(c => `<option>${c}</option>`).join('');
-    countrySelect.disabled = false;
+    // countrySelect.disabled = false;
   } catch {
     countrySelect.innerHTML = `<option>Error loading countries</option>`;
   }

@@ -12,7 +12,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
-// Render main page
+
 app.get('/', (req, res) => {
   res.render('index');
 });
@@ -21,11 +21,11 @@ app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
 
-// Get countries
+
 app.get('/api/countries', async (req, res) => {
   try {
     const response = await axios.get('https://countriesnow.space/api/v0.1/countries/positions');
-    // Extract just country names
+   
     const countries = response.data.data.map(c => c.name).sort();
     res.json({ countries });
   } catch (err) {
@@ -33,7 +33,7 @@ app.get('/api/countries', async (req, res) => {
   }
 });
 
-// Get states of country
+
 app.post('/api/states', async (req, res) => {
   const { country } = req.body;
   if (!country) return res.status(400).json({ error: 'Country required' });
@@ -47,7 +47,7 @@ app.post('/api/states', async (req, res) => {
   }
 });
 
-// Get cities of state
+
 app.post('/api/cities', async (req, res) => {
   const { country, state } = req.body;
   if (!country || !state) return res.status(400).json({ error: 'Country and state required' });

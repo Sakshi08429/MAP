@@ -1,11 +1,11 @@
-/* ===== Reset ===== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== Base Layout ===== */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
@@ -16,14 +16,14 @@ body {
   color: #333;
 }
 
-/* ===== Container ===== */
+
 .container {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* ===== Dropdowns ===== */
+
 .dropdowns {
   display: flex;
   flex-wrap: wrap;
@@ -44,7 +44,7 @@ body {
   border-color: #007bff;
 }
 
-/* ===== Button ===== */
+
 button {
   padding: 4px 8px; 
   cursor: pointer;
@@ -64,7 +64,7 @@ button:hover {
 }
 
 
-/* ===== Info Box ===== */
+
 #info {
   padding: 8px 10px;
   border: 1px solid #ddd;
@@ -76,16 +76,16 @@ button:hover {
   line-height: 1.3;
 }
 
-/* ===== Map ===== */
+
 #map {
   flex: 1;
-  min-height: calc(100vh - 180px); /* Adjust so it uses remaining space */
+  min-height: calc(100vh - 180px);
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* ===== Shimmer Effect ===== */
+
 .shimmer {
   width: 100%;
   height: 18px;
@@ -106,7 +106,7 @@ button:hover {
   100% { background-position: 200% 0; }
 }
 
-/* ===== Responsive ===== */
+
 @media (max-width: 768px) {
   .dropdowns {
     flex-direction: column;
