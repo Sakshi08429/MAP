@@ -9,11 +9,11 @@ let map, marker;
 
 function initMap(lat = 28.584359, lon = 77.315493) {
   if (map) {
-    map.setView([lat, lon], 15);
+    map.setView([lat, lon], 13);
     if (marker) marker.setLatLng([lat, lon]);
     else marker = L.marker([lat, lon]).addTo(map);
   } else {
-    map = L.map('map').setView([lat, lon], 15);
+    map = L.map('map').setView([lat, lon], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors',
     }).addTo(map);
