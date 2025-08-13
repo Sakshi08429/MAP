@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Location Info App</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  
+
+  <div class="dropdowns">
+    <select id="country"></select>
+    <select id="state" disabled></select>
+    <select id="city" disabled></select>
+  </div>
+
+  <button id="btn-current-location">Show My Location</button>
+
+  <div id="info">
+    
+  </div>
+
+  <div id="map" style="height: 400px; margin-top: 20px;"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+  <script src="/script.js"></script>
+</body>
+</html>  
